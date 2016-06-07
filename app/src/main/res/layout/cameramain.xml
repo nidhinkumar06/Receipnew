@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sample_main_layout">
+    <include
+        android:id="@+id/uploadbar"
+        layout="@layout/uploadbar" />
+   <ImageView
+       android:id="@+id/imgview"
+       android:layout_width="match_parent"
+       android:layout_below="@+id/uploadbar"
+       android:background="@color/colorAccent"
+       android:layout_height="250dp" />
+    <LinearLayout
+        android:id="@+id/cameraoption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uploadbar"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:background="@drawable/camera"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Add an image"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/imgview"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:paddingTop="15dp"
+        android:layout_below="@+id/imgview"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:hint="Amount"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:inputType="numberDecimal|number"
+            android:digits="0123456789.,"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvamt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:hint="Currency"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvcurrency" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:background="@drawable/today"
+                android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:hint="Today"
+            android:textSize="19sp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="match_parent"
+            android:id="@+id/tvdate" />
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:hint="Merchant"
+                android:paddingLeft="15dp"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvmerchantname" />
+
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:background="@drawable/card"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:hint="Paid with..."
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="15dp"
+                android:textSize="19sp"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="match_parent"
+                android:id="@+id/tvpaidwith" />
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:background="@drawable/today"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:hint="Category"
+                android:paddingLeft="15dp"
+                android:textSize="19sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="match_parent"
+                android:id="@+id/tvcategory" />
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/comment"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:hint="Comment"
+                android:paddingLeft="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvcomment" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:background="@drawable/card"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:hint="Project"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="15dp"
+                android:textSize="19sp"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="match_parent"
+                android:id="@+id/tvproject" />
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/reun"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:hint="Reimbursable"
+                android:textSize="19sp"
+                android:paddingLeft="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="match_parent"
+                android:id="@+id/tvreimbursable" />
+            <Switch
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/list_permission"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/addtoolbar"
+        layout="@layout/addtoolbar" />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addtoolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:id="@+id/offlinemode">
+       <TextView
+           android:id="@+id/offlinestatus"
+           android:layout_width="wrap_content"
+           android:hint="Offline mode enabled"
+           android:textColorHint="#FFFFFF"
+           android:textColor="#FFFFFF"
+           android:layout_height="wrap_content" />
+
+
+
+        <LinearLayout
+             android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+             android:layout_height="wrap_content">
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar" />
+             <TextView
+                 android:id="@+id/tvrefresh"
+                 android:layout_width="wrap_content"
+                 android:hint="Tap to Refresh"
+                 android:textColorHint="#FFFFFF"
+                 android:textColor="#FFFFFF"
+                 android:textSize="22sp"
+                 android:layout_height="wrap_content" />
+             </LinearLayout>
+           <TextView
+               android:id="@+id/updatestatus"
+               android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:textColorHint="#FFFFFF"
+               android:textColor="#FFFFFF"
+               android:hint="Last updated:5/27/2016 12:34:34 PM"
+               android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            />
+        </LinearLayout>
+
+    <ListView
+        android:id="@+id/listmain"
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/offlinemode" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:text="Nodata"
+        android:paddingTop="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textColor="@color/colorAccent"
+        style="@android:style/TextAppearance.Large"
+        android:gravity="center"
+        android:layout_alignTop="@+id/listmain">
+    </TextView>
+    <RelativeLayout
+        android:id="@+id/container_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/addtoolbar">
+
+        <ImageView
+            android:id="@+id/image_help"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/expensesintro"
+            android:clickable="false"
+            android:scaleType="center" />
+    </RelativeLayout>
+
+</RelativeLayout>
