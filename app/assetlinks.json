@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.user.bakery",
+    "sha256_cert_fingerprints":
+    ["44:31:66:47:39:D0:79:C2:9B:F9:A2:A3:2C:70:F0:E5:C7:9D:1A:84:49:F1:2D:36:0E:6A:33:47:5A:00:F8:FC"]
+  }
+}]
